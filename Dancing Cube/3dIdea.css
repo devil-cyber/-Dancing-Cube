@@ -1,0 +1,64 @@
+.cube{
+	height: 200px;
+	width: 200px;
+	position: relative;
+    margin: auto;
+    margin-top:200px;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	/*perspective - how deep we can see object*/
+ 	transform: rotateX(25deg) rotateY(-25deg);
+ 	animation: rotate 10s ease-in-out infinite;
+}
+.face{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+    transition: all 1s;
+    font-weight: bold;
+    text-align: center;
+	/*animation: rotate 20s infinite linear;*/
+
+}
+.one{
+	background-color: rgba(255,0,0,.5);
+}
+/*.one:hover{
+	transform: rotateX(40deg) rotateY(40deg);
+}*/
+.two{
+	background-color:rgba(255,0,255,.5);;
+	transform: rotateY(90deg) translateZ(-100px) translateX(-100px);
+}
+.three{
+	background-color: rgba(255,255,0,.5);;
+	transform: rotateY(-90deg) translateZ(-100px) translateX(100px);
+}
+.four{
+	background-color: rgba(0,255,0,.5);;
+	transform: rotateX(-90deg) translateY(-100px) translateZ(100px);
+
+}
+.five{
+	background-color: rgba(0,255,255,.5);;
+	transform: rotateX(-90deg) translateY(-100px) translateZ(-100px);
+
+}
+.six{
+	background-color: rgba(0,0,255,.5);;
+	transform:translateZ(200px) ;
+
+}
+@keyframes rotate{
+	0%{
+	 transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	50%{
+	transform: rotateX(180deg) rotateY(360deg) rotateZ(180deg);
+		}
+	75%{
+		transform: rotateX(-180deg) rotateY(180deg) rotateZ(0deg);
+	}
+}
